@@ -19,8 +19,11 @@ def nod(a, b):
         a, b = b, a % b
     return a
 
+def nok(a, b):
+    return a * b / nod(a,b)
 
 num1, num2 = get_numbers()
 custom_nod = nod(num1, num2)
+print(f"НОК (вычисленный вручную): {custom_nod}")
 print(f"НОД (вычисленный вручную): {custom_nod}")
 print(f"НОД (с использованием math.gcd): {math.gcd(num1, num2)}")
